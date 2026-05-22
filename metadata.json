@@ -1,0 +1,6 @@
+{
+  "name": "LASUSTECH Student Result Management System",
+  "description": "An academic performance and grading platform for teachers, students, and administrators of Lagos State University of Science and Technology.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

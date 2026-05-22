@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;605;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+/* Print layout optimizations for official transcript statements */
+@media print {
+  body {
+    background-color: white !important;
+    color: black !important;
+    font-size: 12pt !important;
+  }
+  #role_selector_header, #academic_dashboard_nav, #quick_add_mock_btn, #print_transcript_btn, #admin_panel_container, #teacher_panel_container, #search_verification_prompt, .bg-gradient-to-r, .bg-teal-600 {
+    display: none !important;
+  }
+  #student_portal_root, #student_dashboard_details, #transcript_course_details {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+}
