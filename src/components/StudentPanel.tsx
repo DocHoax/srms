@@ -16,16 +16,24 @@ interface StudentPanelProps {
   students: Student[];
   courses: Course[];
   marks: Marks[];
+  activeStudent?: Student | null;
+  isLockedToSelf?: boolean;
+  onClear?: () => void;
 }
 
 export default function StudentPanel({
   students,
   courses,
-  marks
+  marks,
+  activeStudent: propActiveStudent = null,
+  isLockedToSelf = false,
+  onClear
 }: StudentPanelProps) {
   const [matricQuery, setMatricQuery] = useState('');
-  const [activeStudent, setActiveStudent] = useState<Student | null>(null);
+  const [localActiveStudent, setLocalActiveStudent] = useState<Student | null>(null);
   const [searchError, setSearchError] = useState('');
+
+  const activeStudent = isLockedToSelf ? propActiveStudent : localActiveStudent;
 
   // Handle student lookup
   const handleLookup = (matricNo: string) => {
@@ -35,26 +43,31 @@ export default function StudentPanel({
     );
 
     if (student) {
-      setActiveStudent(student);
+      setLocalActiveStudent(student);
       setMatricQuery(student.matricNo);
     } else {
       setSearchError('Matric profile lookup failed. Confirm matric number exists in system.');
-      setActiveStudent(null);
+      setLocalActiveStudent(null);
     }
   };
 
   // Quick select matching profiles
   const handleQuickLookup = (student: Student) => {
-    setActiveStudent(student);
+    setLocalActiveStudent(student);
     setMatricQuery(student.matricNo);
     setSearchError('');
   };
 
   const handleClear = () => {
-    setActiveStudent(null);
-    setMatricQuery('');
-    setSearchError('');
+    if (isLockedToSelf && onClear) {
+      onClear();
+    } else {
+      setLocalActiveStudent(null);
+      setMatricQuery('');
+      setSearchError('');
+    }
   };
+
 
   // Gather academic stats for active student
   const studentMarks = marks.filter(m => m.studentMatricNo === (activeStudent?.matricNo || ''));

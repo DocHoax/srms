@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { Student, Course, Marks } from '../types';
+import { Student, Course, Marks, User } from '../types';
 
 export const DEFAULT_STUDENTS: Student[] = [
   {
@@ -40,8 +40,114 @@ export const DEFAULT_STUDENTS: Student[] = [
     level: 300,
     department: 'Computer Science',
     email: 'elizabeth.akingbade@lasustech.edu.ng'
+  },
+  {
+    matricNo: '220303010011',
+    name: 'Abiodun Opeyemi Samson',
+    level: 400,
+    department: 'Computer Science',
+    email: 'opeyemi.abiodun@lasustech.edu.ng'
+  },
+  {
+    matricNo: '220303010022',
+    name: 'Bello Rukayat Kehinde',
+    level: 400,
+    department: 'Computer Science',
+    email: 'rukayat.bello@lasustech.edu.ng'
+  },
+  {
+    matricNo: '220303010033',
+    name: 'Coker Daniel Taiwo',
+    level: 400,
+    department: 'Computer Science',
+    email: 'daniel.coker@lasustech.edu.ng'
+  },
+  {
+    matricNo: '220303010044',
+    name: 'Durosinmi Yusuf Olawale',
+    level: 400,
+    department: 'Computer Science',
+    email: 'yusuf.durosinmi@lasustech.edu.ng'
+  },
+  {
+    matricNo: '220303010055',
+    name: 'Falade Grace Oluwatoyin',
+    level: 400,
+    department: 'Computer Science',
+    email: 'grace.falade@lasustech.edu.ng'
+  },
+  {
+    matricNo: '220303010066',
+    name: 'Gbajabiamila Hameed Adebola',
+    level: 400,
+    department: 'Computer Science',
+    email: 'hameed.gbaja@lasustech.edu.ng'
+  },
+  {
+    matricNo: '220303010077',
+    name: 'Ibrahim Mariam Titilayo',
+    level: 400,
+    department: 'Computer Science',
+    email: 'mariam.ibrahim@lasustech.edu.ng'
+  },
+  {
+    matricNo: '220303010088',
+    name: 'Jide-Ojo Solomon Tobi',
+    level: 400,
+    department: 'Computer Science',
+    email: 'solomon.jideojo@lasustech.edu.ng'
+  },
+  {
+    matricNo: '220303010099',
+    name: 'Kolawole Blessing Eniola',
+    level: 400,
+    department: 'Computer Science',
+    email: 'blessing.kolawole@lasustech.edu.ng'
+  },
+  {
+    matricNo: '230303010010',
+    name: 'Lawal Ridwan Olanrewaju',
+    level: 300,
+    department: 'Computer Science',
+    email: 'ridwan.lawal@lasustech.edu.ng'
+  },
+  {
+    matricNo: '230303010020',
+    name: 'Muhammed Fatima Alao',
+    level: 300,
+    department: 'Computer Science',
+    email: 'fatima.muhammed@lasustech.edu.ng'
+  },
+  {
+    matricNo: '230303010030',
+    name: 'Nwachukwu Vivian Chika',
+    level: 300,
+    department: 'Computer Science',
+    email: 'vivian.nwachukwu@lasustech.edu.ng'
+  },
+  {
+    matricNo: '230303010040',
+    name: 'Olusegun Temitope James',
+    level: 300,
+    department: 'Computer Science',
+    email: 'temitope.olusegun@lasustech.edu.ng'
+  },
+  {
+    matricNo: '230303010050',
+    name: 'Peters Deborah Blessing',
+    level: 300,
+    department: 'Computer Science',
+    email: 'deborah.peters@lasustech.edu.ng'
+  },
+  {
+    matricNo: '230303010060',
+    name: 'Quadri Lateef Oyetunde',
+    level: 300,
+    department: 'Computer Science',
+    email: 'lateef.quadri@lasustech.edu.ng'
   }
 ];
+
 
 export const DEFAULT_COURSES: Course[] = [
   // 400 Level - 1st Semester
@@ -94,5 +200,43 @@ export const DEFAULT_MARKS: Marks[] = [
   // Williams David Oluwaseun - 300L
   { studentMatricNo: '230303010112', courseCode: 'CSC 301', test: 24, assignment: 8, exam: 45, total: 77, grade: 'A', gp: 5 },
   { studentMatricNo: '230303010112', courseCode: 'CSC 303', test: 21, assignment: 7, exam: 40, total: 68, grade: 'B', gp: 4 },
-  { studentMatricNo: '230303010112', courseCode: 'CSC 305', test: 20, assignment: 8, exam: 43, total: 71, grade: 'A', gp: 5 }
+  { studentMatricNo: '230303010112', courseCode: 'CSC 305', test: 20, assignment: 8, exam: 43, total: 71, grade: 'A', gp: 5 },
+
+  // Abiodun Opeyemi Samson - 400L
+  { studentMatricNo: '220303010011', courseCode: 'CSC 401', test: 22, assignment: 7, exam: 41, total: 70, grade: 'A', gp: 5 },
+  { studentMatricNo: '220303010011', courseCode: 'CSC 403', test: 20, assignment: 8, exam: 38, total: 66, grade: 'B', gp: 4 },
+  { studentMatricNo: '220303010011', courseCode: 'CSC 405', test: 17, assignment: 6, exam: 35, total: 58, grade: 'C', gp: 3 },
+
+  // Bello Rukayat Kehinde - 400L
+  { studentMatricNo: '220303010022', courseCode: 'CSC 401', test: 28, assignment: 9, exam: 50, total: 87, grade: 'A', gp: 5 },
+  { studentMatricNo: '220303010022', courseCode: 'CSC 403', test: 24, assignment: 8, exam: 46, total: 78, grade: 'A', gp: 5 },
+  { studentMatricNo: '220303010022', courseCode: 'CSC 405', test: 19, assignment: 7, exam: 40, total: 66, grade: 'B', gp: 4 },
+
+  // Falade Grace Oluwatoyin - 400L
+  { studentMatricNo: '220303010055', courseCode: 'CSC 401', test: 18, assignment: 6, exam: 32, total: 56, grade: 'C', gp: 3 },
+  { studentMatricNo: '220303010055', courseCode: 'CSC 403', test: 15, assignment: 5, exam: 25, total: 45, grade: 'D', gp: 2 },
+  { studentMatricNo: '220303010055', courseCode: 'CSC 405', test: 12, assignment: 4, exam: 20, total: 36, grade: 'F', gp: 0 }
 ];
+
+export const DEFAULT_USERS: User[] = [
+  // Admins (2)
+  { username: 'admin1', password: 'adminpassword1', role: 'admin', name: 'Admin Director (Central)' },
+  { username: 'admin2', password: 'adminpassword2', role: 'admin', name: 'Admin Registrar (CS Dept)' },
+  
+  // Lecturers (5)
+  { username: 'lecturer1', password: 'lecturerpassword1', role: 'teacher', name: 'Mr. Akinrinlola Ibitoye Akinfolajimi' },
+  { username: 'lecturer2', password: 'lecturerpassword2', role: 'teacher', name: 'Dr. Falola Babatunde' },
+  { username: 'lecturer3', password: 'lecturerpassword3', role: 'teacher', name: 'Mrs. Odusanya Beatrice' },
+  { username: 'lecturer4', password: 'lecturerpassword4', role: 'teacher', name: 'Prof. Adebayo Adesina' },
+  { username: 'lecturer5', password: 'lecturerpassword5', role: 'teacher', name: 'Mr. Igwe Chukwuma' },
+
+  // Students (20)
+  ...DEFAULT_STUDENTS.map((student, idx) => ({
+    username: student.matricNo,
+    password: `studentpassword${idx + 1}`,
+    role: 'student' as const,
+    name: student.name,
+    associatedId: student.matricNo
+  }))
+];
+

@@ -40,3 +40,11 @@ export interface GradingRule {
 }
 
 export type UserRole = 'student' | 'teacher' | 'admin';
+
+export interface User {
+  username: string;
+  password: string;
+  role: UserRole;
+  name: string;
+  associatedId?: string;
+}
