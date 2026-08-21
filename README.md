@@ -16,5 +16,14 @@ View your app in AI Studio: https://ai.studio/apps/d8c3a12b-c2d1-4222-9ece-d7a63
 1. Install dependencies:
    `npm install`
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
+3. Setup the SQLite database:
+   `npm run db:setup`
+4. Run the app:
    `npm run dev`
+
+## Database
+
+- Database file: `database/srms.db`
+- Schema: `database/schema.sql`
+- Seed data: `database/seed.sql`
+- Reset data only: `npm run db:reset`
